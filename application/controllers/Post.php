@@ -26,6 +26,7 @@ class Post extends CI_Controller {
 		$data = new stdClass(); // view objects
 		$formdata->user_id = $_SESSION['user_id']; // get user_id from session
 		$formdata->content = $this->input->post('content'); // get status message content from <textarea name="content">
+		$formdata->content = strip_tags($formdata->content, '<img>');
 		$post = $this->posts_model->create($formdata); // save the data
 
 		if( $post ){

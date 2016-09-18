@@ -1,0 +1,17 @@
+#friend-control-panel {
+  padding: 10px 0;
+  margin: -20px 0 10px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  background-color: #F4F7F9; }
+  #friend-control-panel #friend-identifier h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black; }
+  #friend-control-panel #friend-controls #friendship-status {
+    font-weight: bold;
+    text-align: right; }
+
+/*# sourceMappingURL=friend.css.map */

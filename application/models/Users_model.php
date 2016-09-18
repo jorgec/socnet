@@ -122,7 +122,7 @@ class Users_model extends CI_Model {
 	
 	function is_logged_in()
 	{
-		if( $_SESSION['logged_in'] == 1 ){
+		if( isset( $_SESSION['logged_in'] ) && $_SESSION['logged_in'] == 1 ){
 			return TRUE;
 		}
 		return FALSE;
@@ -169,6 +169,7 @@ class Users_model extends CI_Model {
 
 		// get friends of $id
 		$friends = $this->friends_model->get_friends( $id );
+		
 		
 		return $friends;
 	}

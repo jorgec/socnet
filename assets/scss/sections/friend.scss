@@ -1,0 +1,23 @@
+@import '../variables/colors';
+#friend-control-panel{
+	padding: 10px 0;
+	margin: -20px 0 10px 0;
+	box-shadow: 0 0 20px 0 hsla(0,0%,0%,.15);
+	background-color: $light-gray;
+	#friend-identifier{
+		h2{
+			padding: 0;
+			margin: 0;
+			font-size: 18px;
+			font-weight: 900;
+			text-transform: uppercase;
+			color: black;
+		}
+	}
+	#friend-controls{
+		#friendship-status{
+			font-weight: bold;
+			text-align: right;
+		}
+	}
+}

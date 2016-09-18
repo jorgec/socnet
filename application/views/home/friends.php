@@ -6,8 +6,8 @@
 			<h1>Friends</h1>
 			<ul>
 			<?php if( $friends ):?>
-				<?php foreach( $friends as $user ):?>
-					<li><a href="<?php echo site_url('friend/'. $user->id);?>"><?php echo $user->username;?></a></li>
+				<?php foreach( $friends as $friend ):?>
+					<li><a href="<?php echo site_url('friend/'. $friend->userdata->id);?>"><?php echo $friend->userdata->username;?></a></li>
 				<?php endforeach;?>
 			<?php else:?>
 				<li>You have no friends!</li>

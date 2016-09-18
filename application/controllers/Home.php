@@ -11,6 +11,7 @@ class Home extends CI_Controller {
 		$this->load->model('posts_model');
 		if( ! $this->users_model->is_logged_in() ) redirect(site_url('user/login'));
 		$this->user_id = $_SESSION['user_id'];
+		//$this->output->enable_profiler(TRUE);
 	}
 
 	public function index()

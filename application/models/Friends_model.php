@@ -96,8 +96,24 @@ class Friends_model extends CI_Model {
 
 	function get_friends( $user_id )
 	{
-		$condition = array( 'user_1' => $user_id );
-		return $this->get_all( $condition );
+		//$condition = array( 'user_1' => $user_id );
+		$condition =  "(`user_1` = '$user_id' OR `user_2` = '$user_id') AND `status` = 1";
+		$friends = $this->get_all( $condition );
+		foreach( $friends as $k => $f ){
+			if( $friends[$k]->user_1 == $_SESSION['user_id'] ){
+				$friends[$k]->userdata = $this->users_model->get($friends[$k]->user_2)->row();
+			}else{
+				$friends[$k]->userdata = $this->users_model->get($friends[$k]->user_1)->row();
+			}
+		}
+		return $friends;
+	}
+
+	function check_friendship( $user_1, $user_2 )
+	{
+		$condition =  "(`user_1` = '$user_1' OR `user_2` = '$user_1') OR (`user_1` = '$user_2' OR `user_2` = '$user_2')";
+		$status = $this->get_one($condition);
+		return $status;
 	}
 	
 }
