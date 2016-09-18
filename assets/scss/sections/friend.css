@@ -1,3 +1,10 @@
+a, a:active, a:visited {
+  color: #111; }
+
+a:hover {
+  color: black;
+  text-decoration: none; }
+
 #friend-control-panel {
   padding: 10px 0;
   margin: -20px 0 10px 0;

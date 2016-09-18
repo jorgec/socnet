@@ -30,12 +30,13 @@ class Home extends CI_Controller {
 		$this->load->view('home/index', $data);
 	}
 
-	public function browse()
+	public function search()
 	{
 		$data = new stdClass();
-		$data->nonfriends = $this->users_model->get_nonfriends();
-		$data->page_title = 'Browse Non Friends';
-		$this->load->view('home/browse', $data);
+		$data->s = $this->input->get('s');
+		$data->page_title = 'Search results for ' . $data->s;
+
+		$this->load->view('home/search', $data);
 	}
 
 	public function friends()

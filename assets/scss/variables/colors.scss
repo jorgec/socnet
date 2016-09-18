@@ -3,8 +3,18 @@ $light-gray-plus: #F0F0F0;
 $gray: #DCE9ED;
 $gray-plus: #CFCFCF;
 $dark-gray: #797979;
-$text: #1D1E1F;
+$text: #2D2E2F;
+$darkest-gray: #111;
 
 $light-blue: #DAF4F9;
 
 $heading-highlight: #3097C7;
+
+a, a:active, a:visited{
+	color: $darkest-gray;
+}
+
+a:hover{
+	color: black;
+	text-decoration: none;
+}

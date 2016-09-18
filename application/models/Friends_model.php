@@ -85,7 +85,13 @@ class Friends_model extends CI_Model {
 	function set($column, $value, $id)
 	{
 		$this->db->where( $this->pk, $id );
+		$formdata->updated = date('Y-m-d h:i:s');
 	    return $this->db->update( $this->tbl, array( $column => $value ) );
+	}
+	function set_by($condition, $column, $value)
+	{
+		$this->db->where($condition);
+		return $this->db->update( $this->tbl, array( $column => $value ) );
 	}
 
 	function delete( $id ){
@@ -114,6 +120,36 @@ class Friends_model extends CI_Model {
 		$condition =  "(`user_1` = '$user_1' OR `user_2` = '$user_1') OR (`user_1` = '$user_2' OR `user_2` = '$user_2')";
 		$status = $this->get_one($condition);
 		return $status;
+	}
+
+	function unfriend($user_1, $user_2)
+	{
+		$condition =  "(`user_1` = '$user_1' OR `user_2` = '$user_1') OR (`user_1` = '$user_2' OR `user_2` = '$user_2')";
+		$unfriend = $this->set_by( $condition, 'status', 0 );
+		return $unfriend;
+	}
+
+	function befriend( $user_1, $user_2 )
+	{
+		$data->user_1 = $user_1;
+		$data->user_2 = $user_2;
+
+		return $this->create($data);
+	}
+
+	function confirm( $user_1, $user_2 )
+	{
+		$condition =  "(`user_1` = '$user_1' OR `user_2` = '$user_1') OR (`user_1` = '$user_2' OR `user_2` = '$user_2')";
+		$confirm = $this->set_by( $condition, 'status', 1 );
+		return $confirm;		
+	}
+
+	function deny( $user_1, $user_2 )
+	{
+		$condition =  "(`user_1` = '$user_1' OR `user_2` = '$user_1') OR (`user_1` = '$user_2' OR `user_2` = '$user_2')";
+		$this->db->where($condition);
+		$deny = $this->db->delete($this->tbl);
+		return $deny;
 	}
 	
 }

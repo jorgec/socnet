@@ -20,7 +20,7 @@
 								<?php
 							}
 						}else{
-							echo '<span class="label label-success">You are friends with ' . $user->username . '</span>';
+							echo '<span class="label label-success">You are friends with ' . $user->username . '. <a href="' . site_url('friend/remove/' . $user_id) . '">Unfriend?</a></span>';
 						}
 					}else{
 						echo '<span class="label label-warning">You are not friends with ' . $user->username . '. Do you want to <a href="' . site_url('friend/request/' . $user_id) . '">send a friend request</a>?</span>';

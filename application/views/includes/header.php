@@ -19,7 +19,7 @@
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-inverse" role="navigation">
+			<nav class="navbar navbar-default" role="navigation" id="main-nav">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
@@ -34,11 +34,19 @@
 			
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse navbar-ex1-collapse">
+
 						
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="<?php echo site_url('home');?>">Home</a></li>
 							<li><a href="<?php echo site_url('home/friends');?>">Friends</a></li>
-							<li><a href="<?php echo site_url('home/browse');?>">Browse</a></li>
+
+							<li>
+								<form class="navbar-form" method="get" action="<?php echo site_url('home/search');?>">
+									<input type="text" name="s" id="s" class="form-control" placeholder="Search..." required="required" value="<?php echo isset($_GET['s']) ? $_GET['s'] : '';?>">
+									<button type="submit" class="btn btn-default">Submit</button>
+								</form>
+							</li>
+
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Actions <b class="caret"></b></a>
 								<ul class="dropdown-menu">

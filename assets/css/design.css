@@ -1,3 +1,31 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:400,700";
+a, a:active, a:visited {
+  color: #111; }
+
+a:hover {
+  color: black;
+  text-decoration: none; }
+
+a, a:active, a:visited {
+  color: #111; }
+
+a:hover {
+  color: black;
+  text-decoration: none; }
+
+body {
+  font-family: "Montserrat", "Source Sans Pro", "Arial", sans-serif; }
+
+#main-nav {
+  text-transform: uppercase; }
+
+a, a:active, a:visited {
+  color: #111; }
+
+a:hover {
+  color: black;
+  text-decoration: none; }
+
 .post .post-heading {
   font-size: .85em;
   color: white;
@@ -37,6 +65,13 @@
 .post .comment-form {
   margin: 10px 30px; }
 
+a, a:active, a:visited {
+  color: #111; }
+
+a:hover {
+  color: black;
+  text-decoration: none; }
+
 #friend-control-panel {
   padding: 10px 0;
   margin: -20px 0 10px 0;
@@ -52,6 +87,18 @@
   #friend-control-panel #friend-controls #friendship-status {
     font-weight: bold;
     text-align: right; }
+
+a, a:active, a:visited {
+  color: #111; }
+
+a:hover {
+  color: black;
+  text-decoration: none; }
+
+#main-footer {
+  background: #DCE9ED url(../images/bg-footer.png) repeat-x left top;
+  padding: 40px 0;
+  margin: 10px 0 0 0; }
 
 .navbar {
   border-radius: 0; }
@@ -81,7 +128,7 @@ body {
   margin: 0 0 10px 0;
   border: 1px solid #CFCFCF;
   border-radius: 1px;
-  color: #1D1E1F;
+  color: #2D2E2F;
   box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.15);
   background-color: white; }
 

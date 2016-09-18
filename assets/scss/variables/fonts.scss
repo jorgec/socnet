@@ -1,0 +1,12 @@
+@import 'colors';
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+
+$h: 'Montserrat', 'Source Sans Pro', 'Arial', sans-serif;
+
+body{
+	font-family: $h;
+}
+
+#main-nav{
+	text-transform: uppercase;
+}

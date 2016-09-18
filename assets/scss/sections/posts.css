@@ -1,3 +1,10 @@
+a, a:active, a:visited {
+  color: #111; }
+
+a:hover {
+  color: black;
+  text-decoration: none; }
+
 .post .post-heading {
   font-size: .85em;
   color: white;

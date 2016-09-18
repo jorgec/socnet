@@ -37,19 +37,27 @@ class Friend extends CI_Controller {
 
 	public function confirm($user_id)
 	{
-
+		$current_user_id = $_SESSION['user_id'];
+		$this->friends_model->confirm( $current_user_id, $user_id );
+		redirect(site_url('friend/' . $user_id));
 	}
 	public function deny($user_id)
 	{
-
+		$current_user_id = $_SESSION['user_id'];
+		$this->friends_model->deny( $current_user_id, $user_id );
+		redirect(site_url('home'));
 	}
 	public function request($user_id)
 	{
-		
+		$current_user_id = $_SESSION['user_id'];
+		$this->friends_model->befriend( $current_user_id, $user_id );
+		redirect(site_url('friend/' . $user_id));
 	}
 	public function remove($user_id)
 	{
-
+		$current_user_id = $_SESSION['user_id'];
+		$this->friends_model->unfriend( $current_user_id, $user_id );
+		redirect(site_url('home'));
 	}
 
 }
