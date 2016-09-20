@@ -89,7 +89,7 @@ class Comments_model extends CI_Model {
 	 */
 	function create($formdata)
 	{
-		$formdata->created = date('Y-m-d h:i:s');
+		$formdata->created = date('Y-m-d H:i:s');
 	    return $this->db->insert( $this->tbl, $formdata );
 	}
 

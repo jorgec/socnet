@@ -49,6 +49,7 @@
 						</div>
 					</div>
 					<input type="hidden" name="post_id" id="post-<?php echo $post->id;?>" class="form-control" value="<?php echo $post->id;?>">
+					<input type="hidden" name="poster_id" class="form-control" value="<?php echo $post->user_id;?>">
 					<button type="submit" class="btn btn-primary pull-right">Submit</button>
 				</form>
 			</div>

@@ -29,7 +29,11 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#">SocNet</a>
+						<a class="navbar-brand" href="#">
+							SocNet
+							<?php if( isset( $_SESSION['username']) )echo $_SESSION['username'];?>
+						</a>
+
 					</div>
 			
 					<!-- Collect the nav links, forms, and other content for toggling -->

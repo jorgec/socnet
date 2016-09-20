@@ -27,9 +27,9 @@
 				?>
 			<?php endif;?>
 
-			<?php $this->load->view('home/partials/post_status_form');?>
+			<?php $this->load->view('friend/partials/post_status_form');?>
 
-			<?php $this->load->view('home/partials/status_messages');?>
+			<?php $this->load->view('friend/partials/status_messages');?>
 
 		</div>
 		<div class="col-xs-3 col-sm-2">
