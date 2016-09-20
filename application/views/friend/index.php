@@ -27,8 +27,6 @@
 				?>
 			<?php endif;?>
 
-			<?php $this->load->view('friend/partials/post_status_form');?>
-
 			<?php $this->load->view('friend/partials/status_messages');?>
 
 		</div>

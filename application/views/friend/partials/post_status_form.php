@@ -8,7 +8,7 @@
 					<textarea name="content" id="content" class="form-control" rows="3" required="required"></textarea>
 				</div>
 			</div>
-			
+			<input type="hidden" name="poster_id" class="form-control" value="<?php echo $user_id;?>">
 			<button type="submit" class="btn btn-primary pull-right">Submit</button>
 		</form>
 	</div>
